@@ -32,7 +32,6 @@ function paintReply(newReply) {
   const hours = String(now.getHours()).padStart(2, 0);
   const minutes = String(now.getMinutes()).padStart(2, 0);
   const times = `${hours}:${minutes}`;
-  console.log(times);
 
   span.innerText = newReply;
   span_second.innerText = times;
