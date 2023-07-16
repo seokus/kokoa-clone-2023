@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head type="text/css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>chat w nico - KoKoa Talk</title>
@@ -13,7 +13,7 @@
         <i class="fas fa-wifi"></i>
       </div>
       <div class="status-bar__column">
-        <span>18:43</span>
+        <span id="time">18:43</span>
       </div>
       <div class="status-bar__column">
         <span>110%</span>
@@ -61,7 +61,7 @@
     <form action="#" class="reply">
       <div class="reply__column"><i class="far fa-plus-square fa-lg"></i></div>
       <div class="reply__column">
-        <input type="text" placeholder="Write a message.." />
+        <input id="chatInput" type="text" placeholder="Write a message.." />
         <i class="far fa-smile-wink fa-lg"></i>
         <button>
           <i class="fas fa-arrow-up"></i>
@@ -76,5 +76,7 @@
       src="https://kit.fontawesome.com/6261c403f6.js"
       crossorigin="anonymous"
     ></script>
+    <script src="time.js"></script>
+    <script src="chatting.js"></script>
   </body>
 </html>
