@@ -2,12 +2,20 @@ const chatInput = document.querySelector("#chatInput");
 const reply = document.querySelector(".reply");
 const mainChat = document.querySelector(".main-chat");
 reply.addEventListener("submit", replySubmit);
+const REPLY__KEY = "replys";
+let newReplys = [];
 
 function replySubmit(event) {
   event.preventDefault();
   const newReply = chatInput.value;
   chatInput.value = null;
   paintReply(newReply);
+  newReplys.push(newReply);
+  saveReply();
+}
+
+function saveReply() {
+  localStorage.setItem(REPLY__KEY, JSON.stringify(newReplys));
 }
 
 function paintReply(newReply) {
@@ -35,4 +43,12 @@ function paintReply(newReply) {
 
   span.innerText = newReply;
   span_second.innerText = times;
+}
+
+const getReply = localStorage.getItem(REPLY__KEY);
+
+if (getReply) {
+  const parseReply = JSON.parse(getReply);
+  newReplys = parseReply;
+  parseReply.forEach(paintReply);
 }
