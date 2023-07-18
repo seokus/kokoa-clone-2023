@@ -56,7 +56,7 @@ function paintReply(newReply) {
   span.innerText = newReply.Text;
   span_second.innerText = times;
 
-  messageEvent.addEventListener("toggle", appearDelete);
+  messageEvent.addEventListener("click", appearDelete);
   function appearDelete() {
     button.style.display = "block";
   }
