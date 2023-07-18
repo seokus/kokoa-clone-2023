@@ -34,7 +34,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .fa-battery-full {
