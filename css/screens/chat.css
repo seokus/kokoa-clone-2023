@@ -235,3 +235,15 @@
 .reply:focus-within button {
   animation: inputLong 1s forwards;
 }
+
+.button__hide {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.message-row--own:hover .button__hide {
+  display: block;
+}
